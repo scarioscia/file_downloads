@@ -4,11 +4,13 @@
 This directory contains two scripts to support querying PubMed and downloading resulting files. 
 
 First, `get_pmids.py` gathers PMIDs resulting from each search, with usage:
+
         `python get_pmids.py "searchterms" <outdir>`
 
 This will create a create a file with naming convention `search_terms_todays_date.txt` in the `outdir` directory. Replace `outdir` with your preferred destination for this file. By default it will download include the first 100 PMIDs in response to your search; you can modify the script directly to change this number. These PMIDs will be comma-separated to allow use by existing packages (e.g., [this](https://github.com/billgreenwald/Pubmed-Batch-Download) program or [this](https://github.com/ddomingof/PubMed2PDF/tree/master) Python wrapper). 
 
 Second, `pmid_to_pmc.sh` downloads the `.pdf` file for each PMID, with usage: 
+
         `pmid_to_pmc.sh -o <outdir> -f <search_terms_todays_date.txt>`
 
 The `-o` flag specifies the destination (directory) to download the pdf files; the `-f` flag is the file containing the PMIDs created in the first step. The resulting pdfs are named with the convention `pmid.pdf`. 

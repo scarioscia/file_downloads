@@ -17,11 +17,18 @@ The `-o` flag specifies the destination (directory) to download the pdf files; t
 
 ### Example 
 
-For example, executing `python get_pmids.py "flower ovule count" /Users/myuser/labwork/` on April 6, 2024 would yield a file `flower_ovule_count_04062024.txt` in the `/Users/myuser/labwork/` directory. If that .txt file contains PMIDs 1234, 5313, and 2424, executing `pmid_to_pmc.sh -o /Users/myuser/labwork/downloads -f flower_ovule_count_04062024.txt` will yield files `1234.pdf`, `5313.pdf`, and `2424.pdf` in the `/Users/myuser/labwork/download` directory.
+For example, executing 
+
+		`python get_pmids.py "flower ovule count" /Users/myuser/labwork/` 
+on April 6, 2024 would yield a file `flower_ovule_count_04062024.txt` in the `/Users/myuser/labwork/` directory. 
+
+If that .txt file contains PMIDs 1234, 5313, and 2424, executing 
+		`pmid_to_pmc.sh -o /Users/myuser/labwork/downloads -f flower_ovule_count_04062024.txt`
+will yield files `1234.pdf`, `5313.pdf`, and `2424.pdf` in the `/Users/myuser/labwork/download` directory.
 
 ## Code status
 
-This code has been adapted for a pull request in the `PubMed2PDF` python package: https://github.com/ddomingof/PubMed2PDF/pulls. If merged, this update will allow the user to directly search PubMed and then automatically download the resulting papers, all within one step in the `PubMed2PDF` package. If it is not merged, I will consider repackaging the code here to achieve that, possibly also addressing the below opportunities for improvement. 
+This code has been adapted for a pull request in the `PubMed2PDF` Python package: https://github.com/ddomingof/PubMed2PDF/pulls. If merged, this update will allow the user to directly search PubMed and then automatically download the resulting papers, all within one step in the `PubMed2PDF` package. If it is not merged, I will consider repackaging the code here to achieve that, possibly also addressing the below opportunities for improvement. 
 
 ### Improvements
 - Take number of resulting PMIDs as command line argument

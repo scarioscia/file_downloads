@@ -23,6 +23,7 @@ For example, executing
 on April 6, 2024 would yield a file `flower_ovule_count_04062024.txt` in the `/Users/myuser/labwork/` directory. 
 
 If that .txt file contains PMIDs 1234, 5313, and 2424, executing 
+
 		`pmid_to_pmc.sh -o /Users/myuser/labwork/downloads -f flower_ovule_count_04062024.txt`
 will yield files `1234.pdf`, `5313.pdf`, and `2424.pdf` in the `/Users/myuser/labwork/download` directory.
 

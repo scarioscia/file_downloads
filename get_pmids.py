@@ -8,7 +8,7 @@ from Bio import Entrez
 # Usage: python get_pmids.py "ovule count flower" ./downloads
 
 # Provide your email address to comply with NCBI's usage policy
-Entrez.email = "saracarioscia@gmail.com"
+# to update as command line arg
 
 def search_pubmed(query):
     handle = Entrez.esearch(db="pubmed", term=query, retmax=100)  # Adjust retmax as needed
